@@ -13,7 +13,11 @@ public class SortingListElementsWithLambdaExp {
 		l.add(30);
 		l.add(6);
 		System.out.println("Before sorting : "+l);
-		Collections.sort(l, (I1,I2)-> (I1>I2)? -1 :(I1<I2)? +1 :0); //lambda exp
+		Collections.sort(l, (I1,I2)-> 
+		
+		 Integer.compare(I2, I1));
+        //(I1 > I2) ? -1 : (I1 < I2) ? +1 : 0 ); can also use this instead of compare method
+		
 		System.out.println("After Customised sorting using Lambda expression [so used comparator] : "+l);
 	}
 

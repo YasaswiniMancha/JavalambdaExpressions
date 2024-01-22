@@ -24,8 +24,10 @@ public class SortingTreesetElementsWithlambdaExp {
         System.out.println("Before customized sort /natural sort order of set: " + t);
 
         // Using lambda expression for the comparator
-        TreeSet<Integer> customSortedSet = new TreeSet<Integer>((I1, I2) -> Integer.compare(I2, I1));
-
+        TreeSet<Integer> customSortedSet = new TreeSet<Integer>((I1, I2) ->
+        Integer.compare(I2, I1));
+        //(I1 > I2) ? -1 : (I1 < I2) ? +1 : 0 ); can also use this instead of compare method
+        
         // Adding elements to TreeSet with customized sorting
         customSortedSet.addAll(t);
 
